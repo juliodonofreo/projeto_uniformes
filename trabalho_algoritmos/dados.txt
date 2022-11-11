@@ -1,2 +1,0 @@
-id/nome/cor/tipo do uniforme/quantidade de pedidos
-
