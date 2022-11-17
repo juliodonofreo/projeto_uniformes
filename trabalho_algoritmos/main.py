@@ -1,12 +1,3 @@
-"""
-integrantes:
-    julio donofreo morais
-    vitor
-    fabricio
-    henriky
-    joao
-"""
-
 from consultas import *
 from registros import *
 from validacoes import *
