@@ -1,40 +1,49 @@
+"""
+integrantes:
+    julio donofreo morais
+    vitor
+    fabricio
+    henriky
+    joao
+"""
+
 from consultas import *
 from registros import *
+from validacoes import *
+from rich import *
 
+clr()
+tabelaPedidos()
+tabelaMenu()
 
-def menu() -> int:
-    while True:
-        try:
-            funcao: int = int(input('''[0] sair
-[1] cadastrar pedidos
-[2] mostrar todos os pedidos
-[3] consulta individual por id
-[4] consulta por nome
-[5] editar pedido
-[6] deletar pedido
-digite aqui: '''))
-            if funcao < 0 or funcao > 6:
-                print('Por favor digite um dos valores mencionados. ')
-            else:
-                return funcao
-        except ValueError:
-            print('Por favor digite um número. ')
-
-
+# Menu interativo
 while True:
     valor: int = menu()
     if valor == 1:
+        clr()
         cadastrar_pedido()
+        reset_tabela()
     elif valor == 2:
+        clr()
         mostrar_pedidos()
+        reset_tabela()
     elif valor == 3:
+        clr()
         consulta_individual()
+        reset_tabela()
     elif valor == 4:
+        clr()
         consulta_nome()
+        reset_tabela()
     elif valor == 5:
+        clr()
         editar_pedido()
+        reset_tabela()
     elif valor == 6:
+        clr()
         deletar_pedido()
+        reset_tabela()
     elif valor == 0:
         break
-print('até logo!')
+clr()
+print(':hand: Até logo!')
